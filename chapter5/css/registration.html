@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!-- Register for a Math course -->
+
+<html lang="en">
+    <head>
+        <title>
+            Course Registration
+        </title>
+        <!-- Link/Include Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+        crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Math Registration</h1>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="exampleInputName2">Name</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                </div>
+                <br>
+                <br>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else</div>
+                </div>
+                <br><br>
+                <label for="MCourse">Course Selection</label>
+                <select class="form-control" name="MCourse" id="MCourse">
+                    <option disabled selected value="">Math Course</option>
+                    <option value="Geometry">Geometry</option>
+                    <option value="(H) Geometry">(H) Geometry</option>
+                    <option value="Alegebra 2">Algebra 2</option>
+                    <option value="(H) Algebra 2">(H) Algebra 2</option>
+                    <option value="Pre-Calc">Pre-Calc</option>
+                    <option value="(H) Pre-Calc">(H) Pre-Calc</option>
+                </select>
+                <br>
+                <br>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> I have read and agree to the terms and conditions
+                    </label>
+                </div>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-danger btn-lg">Register</button>
+            </form>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+/**
+ * De-cipher a message that was ciphers with 5 characters
+ * off the ASCII value
+ */
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, string argv[])
+{
+    string message = "[tnqf&";
+
+    // De-cipher the message
+    printf("The hidden message is: ");
+
+    // For each character
+    for (int i = 0; i < strlen(message); i++)
+    {
+        printf("%c", message[i] - 5);
+    }
+
+    // New line
+    printf("\n");
+
+    // Return success
+    return 0;
+}
