@@ -12,7 +12,7 @@ with open("hogwarts.csv", "r") as file:
     reader = csv.DictReader(file)
     print(reader.fieldnames) # Print the names of each column in the first row of dictionary
     for row in reader:
-        print(row) # Print out each row of the dictionary
+        print(row) # Print each row of the Dictionary
         house = row["House"]
         houses[house] += 1
 
