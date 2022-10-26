@@ -1,0 +1,7 @@
+Declare a write function called valid_triangle() that takes three real numbers representing the lengths of the 
+three sides of a triangle as its arguments, and outputs either true or false, depending on whther those three
+lengths are capable of making a triangle.
+
+Note the following rules about triangles:
+    A triangle may only have sides with positive lengths
+    The sum of the lengths of any two sides of the triangle must be greater than the length of the third side. 
