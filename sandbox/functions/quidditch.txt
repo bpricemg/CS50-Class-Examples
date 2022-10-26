@@ -1,0 +1,5 @@
+Watch this video first: https://www.youtube.com/watch?v=YOVS9yn2R7c
+
+You want to calculate the final score for a team that has just participated in an exciting quidditch match. Building on the code in quidditch.c, implement a function that takes two variables as input  —  an int indicating the number of times the team got the Quaffle through the other team's hoops, and a bool indicating whether or not they caught the snitch -- and returns that team's final score (what would the return type be?).
+
+Recall that each 'goal' in quidditch is worth 10 points, and that catching the snitch is worth 150 points.
