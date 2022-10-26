@@ -1,0 +1,1 @@
+The code in glocal.c takes input from the user, and passes it through to a function that is supposed to increase its value by 5. However, it looks like despite the function, add_5, seemingly adding 5 to the value of x -- the value of x doesn't change! Run the code once or twice to see what happens, and update the code in add_5 and main to correctly update the value of x.
