@@ -9,7 +9,7 @@
 
 int main(int argc, string argv[])
 {
-	// Input verification. If not proper input, print usage error and stop program
+    // Input verification. If not proper input, print usage error and stop program
     
 
     // Read each of the arguments as ints and save to a running sum
