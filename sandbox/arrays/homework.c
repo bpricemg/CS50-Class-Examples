@@ -1,4 +1,12 @@
-// Helps a user decide which homework to do first
+/**
+ * Helps a user decide which homework to do first
+ * 
+ * Mr. Price - CS50 AP 
+ * 
+ * Name:
+ * Date: 
+ *
+ */
 #include <cs50.h>
 #include <stdio.h>
 #include <stdlib.h>
