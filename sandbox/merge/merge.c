@@ -20,7 +20,7 @@ int main (void)
     printf("Please enter %i elements to fill array: \n", n);
     for (int i = 0; i < n; i++)
     {
-        array[i] = get_int();
+        array[i] = get_int("");
     }
 
     // Display unsorted array
