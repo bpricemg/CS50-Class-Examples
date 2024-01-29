@@ -6,7 +6,7 @@ int main(int argc, char* argv[])
     // Ensure proper usage
     if (argc != 3)
     {
-        printf("Usage: ./annak <source file> <destination file>\n");
+        printf("Usage: ./copy <source file> <destination file>\n");
         return 1;
     }
 
