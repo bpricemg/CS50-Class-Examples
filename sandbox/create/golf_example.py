@@ -1,5 +1,4 @@
 from cs50 import get_int, get_string
-from statistics import mean
 
 def main():
     # Prompt user for input about each hole they played.
