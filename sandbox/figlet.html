@@ -1,0 +1,171 @@
+<h1>Frank, Ian and Glen&rsquo;s Letters</h1>
+<p><a href="https://en.wikipedia.org/wiki/FIGlet">FIGlet</a>, named after<span>&nbsp;</span><a href="http://www.figlet.org/faq.html">Frank, Ian, and Glen&rsquo;s letters</a>, is a program from the early 1990s for making large letters out of ordinary text, a form of<span>&nbsp;</span><a href="https://en.wikipedia.org/wiki/ASCII_art">ASCII art</a>:</p>
+<div class="language-plaintext highlighter-rouge">
+    <div class="highlight">
+        <pre class="highlight"><code> _ _ _          _   _     _
+| (_) | _____  | |_| |__ (_)___
+| | | |/ / _ \ | __| '_ \| / __|
+| | |   &lt;  __/ | |_| | | | \__ \
+|_|_|_|\_\___|  \__|_| |_|_|___/
+</code></pre>
+    </div>
+</div>
+<p>Among the fonts supported by FIGlet are those at<span>&nbsp;</span><a href="http://www.figlet.org/examples.html">figlet.org/examples.html</a>.</p>
+<p>FIGlet has since been ported to Python as a module called<span>&nbsp;</span><a href="https://pypi.org/project/pyfiglet/">pyfiglet</a>.</p>
+<p>In a file called<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">figlet.py</code>, implement a program that:</p>
+<ul class="fa-ul">
+    <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Expects zero or two command-line arguments:
+        <ul class="fa-ul">
+            <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Zero if the user would like to output text in a random font.</li>
+            <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Two if the user would like to output text in a specific font, in which case the first of the two should be<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">-f</code><span>&nbsp;</span>or<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">--font</code>, and the second of the two should be the name of the font.</li>
+        </ul>
+    </li>
+    <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Prompts the user for a<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">str</code><span>&nbsp;</span>of text.</li>
+    <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Outputs that text in the desired font.</li>
+</ul>
+<p>If the user provides two command-line arguments and the first is not<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">-f</code><span>&nbsp;</span>or<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">--font</code><span>&nbsp;</span>or the second is not the name of a font, the program should exit via<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">sys.exit</code><span>&nbsp;</span>with an error message.</p>
+<details>
+    <summary>Hints</summary>
+    <ul class="fa-ul">
+        <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>You can install<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">pyfiglet</code><span>&nbsp;</span>with:
+            <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                    <pre class="highlight"><code>pip install pyfiglet
+</code></pre>
+                </div>
+            </div>
+        </li>
+        <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>The documentation for pyfiglet isn&rsquo;t very clear, but you can use the module as follows:
+            <div class="language-py highlighter-rouge">
+                <div class="highlight">
+                    <pre class="highlight"><code><span class="kn">from</span> <span class="n">pyfiglet</span> <span class="kn">import</span> <span class="n">Figlet</span>
+
+<span class="n">figlet</span> <span class="o">=</span> <span class="nc">Figlet</span><span class="p">()</span>
+</code></pre>
+                </div>
+            </div>
+            <p>You can then get a<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">list</code><span>&nbsp;</span>of available fonts with code like this:</p>
+            <div class="language-py highlighter-rouge">
+                <div class="highlight">
+                    <pre class="highlight"><code><span class="n">figlet</span><span class="p">.</span><span class="nf">getFonts</span><span class="p">()</span>
+</code></pre>
+                </div>
+            </div>
+            <p>You can set the font with code like this, wherein<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">f</code><span>&nbsp;</span>is the font&rsquo;s name as a<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">str</code>:</p>
+            <div class="language-py highlighter-rouge">
+                <div class="highlight">
+                    <pre class="highlight"><code><span class="n">figlet</span><span class="p">.</span><span class="nf">setFont</span><span class="p">(</span><span class="n">font</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+</code></pre>
+                </div>
+            </div>
+            <p>And you can output text in that font with code like this, wherein<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">s</code><span>&nbsp;</span>is that text as a<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">str</code>:</p>
+            <div class="language-py highlighter-rouge">
+                <div class="highlight">
+                    <pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">figlet</span><span class="p">.</span><span class="nf">renderText</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+</code></pre>
+                </div>
+            </div>
+        </li>
+        <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Note that the<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">random</code><span>&nbsp;</span>module comes with quite a few functions, per<span>&nbsp;</span><a href="https://docs.python.org/3/library/random.html">docs.python.org/3/library/random.html</a>.</li>
+    </ul>
+</details>
+<p><a id="demo" data-id=""></a></p>
+<h2>Demo</h2>
+<p>This demo&rsquo;s first output used a random font. Your output may vary.</p>
+<div id="asciicast-container-LIo5QcHpUiXepVFiL4fTBwmuE" class="asciicast"><iframe id="asciicast-iframe-LIo5QcHpUiXepVFiL4fTBwmuE" title="Terminal session recording" src="https://asciinema.org/a/LIo5QcHpUiXepVFiL4fTBwmuE/iframe?autoplay=1&amp;cols=80&amp;loop=1&amp;rows=12" name="asciicast-iframe-LIo5QcHpUiXepVFiL4fTBwmuE" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></div>
+<p><a id="before-you-begin" data-id=""></a></p>
+<h2>Before You Begin</h2>
+<p>Log into<span>&nbsp;</span><a href="https://cs50.dev/">cs50.dev</a>, click on your terminal window, and execute<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">cd</code><span>&nbsp;</span>by itself. You should find that your terminal window&rsquo;s prompt resembles the below:</p>
+<div class="language-plaintext highlighter-rouge">
+    <div class="highlight">
+        <pre class="highlight"><code>$
+</code></pre>
+    </div>
+</div>
+<p>Next execute</p>
+<div class="language-plaintext highlighter-rouge">
+    <div class="highlight">
+        <pre class="highlight"><code>mkdir figlet
+</code></pre>
+    </div>
+</div>
+<p>to make a folder called<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">figlet</code><span>&nbsp;</span>in your codespace.</p>
+<p>Then execute</p>
+<div class="language-plaintext highlighter-rouge">
+    <div class="highlight">
+        <pre class="highlight"><code>cd figlet
+</code></pre>
+    </div>
+</div>
+<p>to change directories into that folder. You should now see your terminal prompt as<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">figlet/ $</code>. You can now execute</p>
+<div class="language-plaintext highlighter-rouge">
+    <div class="highlight">
+        <pre class="highlight"><code>code figlet.py
+</code></pre>
+    </div>
+</div>
+<p>to make a file called<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">figlet.py</code><span>&nbsp;</span>where you&rsquo;ll write your program.</p>
+<p><a id="how-to-test" data-id=""></a></p>
+<h2>How to Test</h2>
+<p>Here&rsquo;s how to test your code manually:</p>
+<ul class="fa-ul">
+    <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Run your program with<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">python figlet.py test</code>. Your program should exit via<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">sys.exit</code><span>&nbsp;</span>and print an error message:
+        <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+                <pre class="highlight"><code>Invalid usage
+</code></pre>
+            </div>
+        </div>
+    </li>
+    <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Run your program with<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">python figlet.py -a slant</code>. Your program should exit via<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">sys.exit</code><span>&nbsp;</span>and print an error message:
+        <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+                <pre class="highlight"><code>Invalid usage
+</code></pre>
+            </div>
+        </div>
+    </li>
+    <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Run your program with<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">python figlet.py -f invalid_font</code>. Your program should exit via<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">sys.exit</code><span>&nbsp;</span>and print an error message:
+        <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+                <pre class="highlight"><code>Invalid usage
+</code></pre>
+            </div>
+        </div>
+    </li>
+    <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Run your program with<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">python figlet.py -f slant</code>. Type<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">CS50</code>. Your program should print the following:
+        <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+                <pre class="highlight"><code>   ___________ __________ 
+  / ____/ ___// ____/ __ \
+ / /    \__ \/___ \/ / / /
+/ /___ ___/ /___/ / /_/ / 
+\____//____/_____/\____/  
+</code></pre>
+            </div>
+        </div>
+    </li>
+    <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Run your program with<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">python figlet.py -f rectangles</code>. Type<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">Hello, world</code>. Your program should print the following:
+        <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+                <pre class="highlight"><code> _____     _ _                        _   _ 
+|  |  |___| | |___      _ _ _ ___ ___| |_| |
+|     | -_| | | . |_   | | | | . |  _| | . |
+|__|__|___|_|_|___| |  |_____|___|_| |_|___|
+                  |_|                       
+</code></pre>
+            </div>
+        </div>
+    </li>
+    <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Run your program with<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">python figlet.py -f alphabet</code>. Type<span>&nbsp;</span><code class="language-plaintext highlighter-rouge">Moo</code>. Your program should print the following:
+        <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+                <pre class="highlight"><code>M   M         
+MM MM         
+M M M ooo ooo 
+M   M o o o o 
+M   M ooo ooo                     </code></pre>
+            </div>
+        </div>
+    </li>
+</ul>
