@@ -1,6 +1,7 @@
 // DigitSum
 #include <cs50.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int digitsum(int n);
 
